@@ -115,7 +115,7 @@ public class Stage2 {
 		departamenti.getItems().clear();
 		departamenti.setPromptText("Departamenti");
 		departamenti.setPrefWidth(170);
-		depratamenti.getItems().addAll(
+		departamenti.getItems().addAll(
 			autotxt,
 			elektxt,
 			elektrtxt,
