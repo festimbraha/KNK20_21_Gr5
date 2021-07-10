@@ -42,7 +42,7 @@ public class Stage2 {
 	
 //Titujt e dropdown
 		private static	Text studimet = new Text("Niveli i studimeve");
-		private static	Text departamenti = new Text("Departamenti");
+		private static	Text depart = new Text("Departamenti");
 		private static	Text semestri = new Text("Semestri");
 		private static  Text grupiText = new Text("Grupi");
 
@@ -70,7 +70,7 @@ public class Stage2 {
 		private static String gr2 = new String("2");
 
 		private static ComboBox nstud = new ComboBox();
-		private static ComboBox dpt = new ComboBox();
+		private static ComboBox departamenti = new ComboBox();
 		private static ComboBox sem = new ComboBox();
 		private static ComboBox grupi = new ComboBox();
 
@@ -80,7 +80,7 @@ public class Stage2 {
 
 //Fontet
 		studimet.setStyle("-fx-font-size:16;");
-		departamenti.setStyle("-fx-font-size:16;");
+		depart.setStyle("-fx-font-size:16;");
 		semestri.setStyle("-fx-font-size:16;");
 		grupiText.setStyle("-fx-font-size:16;");
 
@@ -112,10 +112,10 @@ public class Stage2 {
 			mastertxt
 		);
 
-		dpt.getItems().clear();
-		dpt.setPromptText("departamentiamenti");
-		dpt.setPrefWidth(170);
-		dpt.getItems().addAll(
+		departamenti.getItems().clear();
+		departamenti.setPromptText("Departamenti");
+		departamenti.setPrefWidth(170);
+		depratamenti.getItems().addAll(
 			autotxt,
 			elektxt,
 			elektrtxt,
@@ -173,8 +173,8 @@ public class Stage2 {
 
 		gpane.add(studimet, 0, 1);
 		gpane.add(nstud,1,1);
-		gpane.add(departamenti, 0, 2);
-		gpane.add(dpt, 1, 2);
+		gpane.add(depart, 0, 2);
+		gpane.add(departamenti, 1, 2);
 		gpane.add(semestri, 0, 3);
 		gpane.add(sem, 1, 3);
 		gpane.add(grupiText,0,4);
@@ -200,12 +200,12 @@ public class Stage2 {
 		
 		public static List<Orari> merrOrarin() {
 			List<Orari> orariList = new ArrayList();
-			String dep=(String) dpt.getValue();
+			String dep=(String) departamenti.getValue();
 			String nvStud= (String)nstud.getValue();
 			String seme=(String) sem.getValue();
 			String gr=(String) grupi.getValue();
 			System.out.println(nvStud);
-			String query = "Select titlenda, ects, profcol, asscol, ldita, lora, lsalla, udita, uora, usalla from orari WHERE nstud=? and departamentiamenti=? and sem=? and grupi=?";
+			String query = "Select titlenda, ects, profcol, asscol, ldita, lora, lsalla, udita, uora, usalla from orari WHERE nstud=? and departamenti=? and sem=? and grupi=?";
 			
 			try {
 				PreparedStatement preparedStatement = DBConnection.getConnection().prepareStatement(query);
