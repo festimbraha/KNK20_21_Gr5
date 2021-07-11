@@ -51,8 +51,12 @@ public class Login extends Application {
 
 
 //Create and add menu items to menu
+		
+		//Ne kete pjese eshte shtuar kerkesa qe permes tasteve ne tastiere te selektohet ndonje pjese
+		//Ne qofte se shtypim alt + h hapet dropdown per help nga menubar
+		//Gjithashtu ne login page punojne edhe left, right, top and down kur shtypim per levizje lart, poshte, majtas djathtas, pastaj me tastin TAB etj
 
-		Menu editmenu= new Menu("_Click Me");
+		Menu editmenu= new Menu("_Help");
 
 		MenuItem cut= new MenuItem("Help");
 		editmenu.getItems().add(cut);
