@@ -157,7 +157,7 @@ public class Stage3 {
 	    table.setItems( Stage2.showOrarin());
 		table.getColumns().addAll(lenda, kredi, prof,ligjeratacol);
 		table.setEditable(false);
-		//BUTONI BACK DHE EVENT HANDLERS
+	
 				HBox hbox = new HBox();
 				hbox.setPadding(new Insets(10,10,10,1));
 				hbox.getChildren().add(kthehu);
@@ -173,7 +173,7 @@ public class Stage3 {
 					try {
 						Stage2.secondarystage(mainstage);
 					} catch (Exception e1) {
-						// TODO Auto-generated catch block
+					
 						e1.printStackTrace();
 					}
 				});
