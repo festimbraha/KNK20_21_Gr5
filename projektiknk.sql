@@ -50,7 +50,7 @@ VALUES (10, 'Sinjale dhe Sisteme', '5', 'Vjosa Shatri', 'Drilon Bunjaku', 'E hen
 
  INSERT INTO users(id,emri,mbiemri,numriID,password)
  VALUES
- (1,'Festim','Braha',190714100099,'admin'),
+ (1,'Test','Test',100,'admin'),
  (9,'admin','admin',1,'test');
 
  
